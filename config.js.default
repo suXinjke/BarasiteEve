@@ -1,0 +1,24 @@
+module.exports = {
+
+    // Absolute path to the tools directory, forward slashes are recommended
+    parasite_eve_tools_directory: 'C:/example/path/to/whatever',
+
+    // Yandex Translation API key, this is required for program to work
+    yandex_key: 'trnsl.1.1.XXXXXXXXXXXXXXXXXXX.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+
+    // One of the presets below will be randomly used for translation
+    // If you want to use only one preset, just leave exactly one
+    language_presets: [
+        [ 'en', 'he', 'ko', 'zh', 'en' ],
+        [ 'en', 'zh', 'ko', 'vi', 'en' ],
+        [ 'en', 'zh', 'en' ],
+        [ 'en', 'vi', 'en', 'vi', 'en' ],
+    ]
+
+    // Language codes that will be randomly used if no presets are specified
+    // The preset will be generated as: [ 'en', ..., 'en' ]
+    languages: [ 'az', 'ar', 'bg', 'vi', 'el', 'he', 'id', 'sr', 'tt', 'fi', 'hi', 'cs', 'zh' ],
+
+    // The length of random language preset if no presets are specified
+    translation_chain_length: 3
+}
